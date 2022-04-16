@@ -1,0 +1,131 @@
+﻿@model IEnumerable<TTCS.Models.BangGiaTrucTuyen>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MaCK)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaMua1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoLuongMua1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaMua2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoLuongMua2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaMua3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoLuongMua3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaKhop)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoLuongKhop)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaBan1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoLuongBan1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaBan2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoLuongBan2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaBan3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoLuongBan3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TongSo)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaCK)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaMua1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuongMua1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaMua2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuongMua2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaMua3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuongMua3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaKhop)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuongKhop)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaBan1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuongBan1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaBan2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuongBan2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaBan3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuongBan3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TongSo)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
